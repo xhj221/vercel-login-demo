@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>贷款平台登录</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    input {
+      width: 100%;
+      padding: 0.6em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button, .alt-login {
+      width: 100%;
+      padding: 0.6em;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 0.5em;
+      cursor: pointer;
+    }
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+    }
+    .alt-login {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>贷款平台登录</h2>
+    <form method="post" action="/api/login/submit">
+      <input type="text" name="username" placeholder="用户名 / 邮箱 / 手机号" required>
+      <input type="password" name="password" placeholder="密码" required>
+      <button class="submit-btn" type="submit">登录</button>
+    </form>
+    <button class="alt-login">📧 邮箱登录</button>
+    <button class="alt-login">📱 微信登录</button>
+    <button class="alt-login">💬 QQ 登录</button>
+    <button class="alt-login">📞 手机号登录</button>
+  </div>
+</body>
+</html>
