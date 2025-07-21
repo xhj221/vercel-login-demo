@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "api/login.py",
@@ -7,12 +8,7 @@
   ],
   "routes": [
     {
-      "src": "/submit",
-      "methods": ["POST"],
-      "dest": "api/login.py"
-    },
-    {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "api/login.py"
     }
   ]
